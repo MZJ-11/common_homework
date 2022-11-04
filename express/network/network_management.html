@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<!-- zui -->
+		<link rel="stylesheet" href="dist/css/zui.min.css"/>
+				<script src="dist/lib/jquery/jquery.js"></script>
+				<script src="dist/js/zui.min.js"></script>
+				<link href="dist/lib/datagrid/zui.datagrid.min.css" rel="stylesheet">
+				<script src="dist/lib/datagrid/zui.datagrid.min.js"></script>
+	</head>
+	<body>
+		<div id="myDataGrid" class="datagrid">
+				  <div class="datagrid-container"></div>
+				  <div class="pager"></div>
+	</body>
+</html>
+<script>
+	
+	$("#myDataGrid").datagrid({
+		    dataSource: {
+		        cols:[
+		            {name: 'time', label: '创建时间', width: 132},
+					{name: 'main_worker', label: '网点管理员', width: 109},
+		            {name: 'worker_number', label: '员工数', width: 109},
+		            {name: 'packet_number', label: '包裹数', width: 109},
+					{name: 'packet_max_number', label: '包裹最大容量', width: 109},
+		            {name: 'tel', label: '电话号码', width: 109},
+		            {name: 'address', label: '地址', width: 287},
+					{
+										name: 'action',
+										label: '操作',
+										html:true,
+										// 值转换器仅仅影响当前列
+										valueOperator: {
+											getter: function(dataValue, cell, dataGrid) {
+												//dataValue 应该就是 demo.json 中time的值
+												//return 就是外面要显示的值
+												return "<button class='btn btn-sm btn-info'>修改</button> <button class='btn btn-sm btn-danger'>删除</button>" ;
+											}
+										}
+									}
+		        ],
+		        remote: function(params) {
+		            return {
+		                // 原创请求地址
+		                url: 'json/demo4.json',
+		                // 请求类型
+		                type: 'GET',
+		                // 数据类型
+		                dataType: 'json',
+						// 获取数据表格实例
+						
+		            };
+		        },
+		    }
+		});
+</script>

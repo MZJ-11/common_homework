@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="../dist/lib/jquery/jquery-3.4.1.min.js"></script>
+		<script src="../dist/lib/chart/zui.chart.min.js"></script>
+		<style>
+			.main-top {
+				margin: 10px;
+			}
+
+			.main-left {
+				margin-left: 10px;
+			}
+			
+			.main-text-head {
+				position: absolute;
+				top: 30px;
+				left: 400px;
+				bottom: 5px;
+			}
+			
+			.main-right {
+				position: absolute;
+				top: 70px;
+				left: 215px;
+				right: 10px;
+				bottom: 5px;
+			}
+
+			iframe {
+				border: 0px;
+				width: 100%;
+				height: 100%;
+			}
+		</style>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div>
+			<a class="main-text-head">包裹状态</a>
+			<canvas class="main-right" id="myChart" width="400" height="400"></canvas>
+		</div>
+		
+	</body>
+</html>
+<script>
+	var data = [{
+		value: 150,
+		color: "blue", // 使用颜色名称
+		label: "已配送包裹"
+	}, {
+		value: 250,
+		color: "#F7464A", // 自定义颜色
+		// highlight: "#FF5A5E", // 自定义高亮颜色
+		label: "未配送包裹"
+	}, ];
+
+	// 图表配置项，可以留空来使用默认的配置
+	var options = {
+		scaleShowLabels: true, // 展示标签
+		percentageInnerCutout : 30,
+		animationSteps : 30,
+		segmentStrokeWidth : 1,
+		scaleLabel: "<%=value%>",
+	};
+	 
+	// 创建饼图
+	var myPieChart = $("#myChart").pieChart(data, options);
+
+	// 创建环形饼图
+	var myDoughnutChart = $("#myChart").doughnutChart(data, {
+		segmentShowStroke: false
+	});
+</script>

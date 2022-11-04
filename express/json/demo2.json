@@ -1,0 +1,22 @@
+{
+    
+    "result": "success",
+
+   
+    "data": [
+       {"time": "00:11:12", "name":"张三", "state": "空闲", "network": "1", "tel": "123456789","address":"福建省福州市闽侯县大学城福州大学东门","action":101},
+       {"time": "00:13:22", "name":"李四", "state": "空闲", "network": "2", "tel": "213456798","address":"福建省福州市闽侯县大学城福州大学西门","action":102},
+       {"time": "00:19:36", "name":"王五", "state": "忙碌", "network": "3", "tel": "321456987","address":"福建省福州市闽侯县大学城福州大学南门","action":103},
+       {"time": "00:21:43", "name":"陈六", "state": "忙碌", "network": "4", "tel": "432159876","address":"福建省福州市闽侯县大学城福州大学北门","action":104}
+    ],
+
+
+    "message": "",
+
+    
+    "pager": {
+        "page": 1,           
+        "recTotal": 100,    
+        "recPerPage": 5    
+    }
+}

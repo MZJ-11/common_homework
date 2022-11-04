@@ -1,0 +1,26 @@
+{
+
+	"result": "success",
+
+
+	"data": [{
+			"reTel": "00:11:12",
+			"weight": "亚索",
+			"state": "40",
+			"seTel": "200",
+			"id": "500",
+			"reAdd": "123456789",
+			"seAdd": "福建省福州市闽侯县大学城福州大学东门",
+			"action":1
+		}
+	],
+
+	"message": "",
+
+
+	"pager": {
+		"page": 1,
+		"recTotal": 1000,
+		"recPerPage": 5
+	}
+}

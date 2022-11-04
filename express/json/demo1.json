@@ -1,0 +1,22 @@
+{
+    
+    "result": "success",
+
+    
+    "data": [
+        {"id": "000", "account": "123456789", "time":"00:11:12", "state":0},
+        {"id": "001", "account": "123456798", "time":"00:13:22", "state":1},
+        {"id": "002", "account": "123456987", "time":"00:19:36", "state":-1},
+        {"id": "003", "account": "123459876", "time":"00:21:43", "state":0}
+    ],
+
+    
+    "message": "",
+
+    
+    "pager": {
+        "page": 1,
+        "recTotal": 100,    
+        "recPerPage": 5    
+    }
+}
